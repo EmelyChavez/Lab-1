@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Calculadora {
@@ -35,7 +34,13 @@ public class Calculadora {
                     break;
                 case 4:
                     resultado =Division(n1, n2);
-                    System.out.println("El resultado de la division es " + resultado);
+                    if(resultado == 0 && n2 == 0){
+                        System.out.println("No es posible dividir entre 0");
+                    }else{
+                        System.out.println("El resultado de la division es " + resultado);
+
+                    }
+
                     break;
             
                 default:
@@ -63,6 +68,7 @@ public class Calculadora {
         if (b > 0) {
             return a/b;
         }else{
+
             return 0;
         }
     }
